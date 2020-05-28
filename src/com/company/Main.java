@@ -1,321 +1,277 @@
 package com.company;
 
-import java.util.Random;
 import java.util.Scanner;
+import java.util.Random;
+import java.util.Arrays;
 
 public class Main {
 
 	public static void main(String[] args) {
-		/////////////// HW 1 ////////////////
+		/////////////// HW 3 = homework5+homework6 ////////////////
 
-		// 1.1
-		Scanner scanner = new Scanner(System.in);
-		//
-		//        int number1 = scanner.nextInt();
-		//        int number2 = scanner.nextInt();
-		//        System.out.println(number1+number2);
+//		Scanner scanner = new Scanner(System.in);
+//		Random random = new Random();
 
-		// 1.2
-		//        int num1 = scanner.nextInt();
-		//        int divisor = scanner.nextInt();
-		//        System.out.println(num1/divisor);
+		// 5.1
+//		System.out.println("Sum of numbers in array is "+sumOfNumbers(generateSeveralNumbers(2)));
 
-		// 1.3
-		//        System.out.println(-5 + 8 * 6);
-		//        System.out.println((55+9) % 9);
-		//        System.out.println(20 + -3*5 / 8);
-		//        System.out.println(5 + 15 / 3 * 2 - 8 % 3);
+		// 5.2
+//		System.out.println("Product of numbers in array is "+ productOfNumbers(generateSeveralNumbers(2)));
 
-		// 1.4
-		//        System.out.print("Input first number: ");
-		//        int number1 = scanner.nextInt();
-		//        System.out.print("Input second number: ");
-		//        int number2 = scanner.nextInt();
-		//        System.out.println(number1 + " x " + number2 + " = " + number1*number2);
+		// 5.3
+//		System.out.println("Cube of product of numbers in array is " + cubeOfProductOfNumbers(generateSeveralNumbers(2)));
+//		int product = productOfNumbers(generateNumbers(2));
+//		System.out.println("Cube of product of numbers in array is " + cubeOfNumber(product));
 
-		// 1.5
-		//        System.out.print("Input a number: ");
-		//        int number = scanner.nextInt();
-		//        for (int i = 1; i < 11; i++) {
-		//            System.out.println( number + " x " + i + " = " + number*i);
-		//        }
+		// 5.4
+//		System.out.println("Smallest number among inputs is " + findMinimum(generateSeveralNumbers(3)));
 
-		// 1.6
-		//        System.out.print("Radius = ");
-		//        double radius = scanner.nextDouble();
-		//        System.out.println("Perimeter is - " + 2*Math.PI*radius);
-		//        System.out.println("Area is - " + Math.PI*Math.pow(radius,2));
+		// 5.5
+//		System.out.println("Middle character of given word is: " + getMiddleCharacter(generateString()));
 
-		// 1.7
-		//        System.out.print("Input a degree in Fahrenheit: ");
-		//        float fahrenheit = scanner.nextFloat();
-		//        System.out.println(fahrenheit + " degree Fahrenheit is equal to " + (fahrenheit-32)*5/9 + " in Celsius");
+		// 5.6
+//		System.out.println("Number of words in sentence is: " + countNumberOfWords(generateString()));
 
-		// 1.8
-		//        System.out.print("Input value for inch: ");
-		//        float inch = scanner.nextFloat();
-		//        double inchToMeter = 0.0245;
-		//        System.out.println(inch + " inch is " + inch*inchToMeter + " meters");
+		// 5.7
+//		System.out.println("Fact of given year being leap is: " + isYearLeap(2012));
 
-		// 1.9
-		//        System.out.print("Input number: ");
-		//        int input = scanner.nextInt();
-		//        System.out.println("Number is " + (input>=0?"positive":"negative"));
+		// 5.8
+//		printIfPasswordValid(generateString());
 
-		// 1.10
-		//        System.out.print("Input the 1st number: ");
-		//        int number1 = scanner.nextInt();
-		//        int maximumNumber = number1;
-		//        System.out.print("Input the 2nd number: ");
-		//        int number2 = scanner.nextInt();
-		//        maximumNumber = maximumNumber>number2?maximumNumber:number2;
-		//        System.out.print("Input the 3rd number: ");
-		//        int number3 = scanner.nextInt();
-		//        maximumNumber = maximumNumber>number3?maximumNumber:number3;
-		//        System.out.println("The greatest: "+maximumNumber);
+		// 5.9
+//		int radius = generateNumber();
+//		System.out.println("Area of circle with radius = " + radius + " is " + areaOfCircle(radius));
+//		System.out.println("Circumference of circle with radius = " + radius + " is " + circumferenceOfCircle(radius));
 
-		//1.11
-		//        int sum = 0;
-		//        System.out.println("Input the 5 numbers : ");
-		//        for (int i = 0; i < 5; i++) {
-		//            int input = scanner.nextInt();
-		//            sum+=input;
-		//        }
-		//        System.out.println("The sum of 5 no is : " + sum);
-		//        System.out.println("The Average is " + (float)sum/5);
+		// 5.10
+//		printAreaPerimeterOfTriangle(generateSeveralNumbers(3));
 
-		// 1.12
-		//        System.out.print("Input ");
-		//        int number = scanner.nextInt();
-		//        System.out.println(number%2==0?"Even":"Odd");
+		// 5.11
+//		int[] array = new int[10];
+//		fillArrayWithRandomIntegers(array);
+//		System.out.print("Array : ");
+//		printArray(array);
 
+		// 5.12
+//		int[] array = new int[10];
+//		fillArrayWithRandomIntegers(array);
+//		System.out.print("Array : ");
+//		printArray(array);
+//		System.out.print("Array sorted in ascending order is : ");
+//		printArray(sortAscendingOrder(array));
 
-		////////////// HW 2 ////////////////
+		// 5.13
+//		int[] array = new int[10];
+//		fillArrayWithRandomIntegers(array);
+//		System.out.print("Array : ");
+//		printArray(array);
+//		System.out.print("Array sorted in descending order is : ");
+//		printArray(sortAscendingOrder(array));
 
-		// 2.1
-		Random random = new Random();
-		//        int number1 = random.nextInt(100-10) + 10;
-		//        int number2 = random.nextInt(100-10) + 10;
-		//        int sum = number1+number2;
-		//        long sumLong = sum;
-		//        System.out.println(sumLong);
+		// 5.14
+//		printPrimesTillGivenNumber(100);
 
-		// 2.2
-		//        int number1 = random.nextInt(100-10) + 10;
-		//        int number2 = random.nextInt(100-10) + 10;
-		//        int product = number1+number2;
-		//        if(product%2 == 0) {
-		//            long productLong = product;
-		//            System.out.println(productLong);
-		//
-		//        }else{
-		//            double productDouble = product;
-		//            System.out.println(productDouble);
-		//        }
+		// 5.15
+//		int[] array = new int[10];
+//		System.out.println("Array: ");
+//		fillArrayWithRandomIntegers(array);
+//		printArray(array);
+//		reverseArray(array);
+//		System.out.println("Reversed array will be: ");
+//		printArray(array);
 
-		// 2.3
-		//        int number = random.nextInt(100-10) + 10;
-		//        double squareOfNumber = Math.pow(number,2);
-		//        String squareToString = String.valueOf(squareOfNumber);
-		//        System.out.println(squareToString);
+		// 5.16
+//		System.out.println(isPalindrome(generateString()));
 
-		// 2.4
-		//        int number = scanner.nex=tInt();
-		//        int randomToChange;
-		//        switch (number/100){
-		//            case 0:
-		//                randomToChange = random.nextInt(50);
-		//                break;
-		//            default:
-		//                randomToChange = random.nextInt(number-50)+50;
-		//        }
-		//        String randomToString = String.valueOf(randomToChange);
-		//        System.out.println(randomToString);
-
-		// 2.5
-		//        int number1 = random.nextInt();
-		//        int number2 = random.nextInt();
-		//        String sign = scanner.next();
-		//        switch (sign){
-		//            case "+":
-		//                System.out.println(number1+number2);
-		//                break;
-		//            case "-":
-		//                System.out.println(number1-number2);
-		//                break;
-		//            case "*":
-		//                System.out.println(number1*number2);
-		//                break;
-		//            case "/":
-		//                System.out.println(number1/number2);
-		//                break;
-		//            default:
-		//                System.out.println("Enter one of the followings: +, -, *, /");
-		//        }
-
-		// 2.6
-		//        int weekdayInt = scanner.nextInt();
-		//        switch (weekdayInt){
-		//            case 1:
-		//                System.out.println("Monday");
-		//                break;
-		//            case 2:
-		//                System.out.println("Tuesday");
-		//                break;
-		//            case 3:
-		//                System.out.println("Wednesday");
-		//                break;
-		//            case 4:
-		//                System.out.println("Thursday");
-		//                break;
-		//            case 5:
-		//                System.out.println("Friday");
-		//                break;
-		//            case 6:
-		//                System.out.println("Saturday");
-		//                break;
-		//            case 7:
-		//                System.out.println("Sunday");
-		//                break;
-		//            default:
-		//                System.out.println("Enter numbers from 1 to 7");
-		//        }
-
-		// 2.7
-		//        String monthName = scanner.nextLine();
-		//        switch (monthName){
-		//            case "January": case "March": case "May": case "July": case "August": case "October": case "December":
-		//                System.out.println("Month have 31 days");
-		//                break;
-		//            case "April": case "June": case "September": case "November":
-		//                System.out.println("Month have 30 days");
-		//                break;
-		//            case "February":
-		//                System.out.println("Month have 28 days");
-		//                break;
-		//            default:
-		//                System.out.println("Enter valid month");
-		//        }
-
-		// 2.8
-		//        int radius = 5;
-		//        System.out.println("------------MENU-----------\n---> enter 1 for calculating area of the circle\n---> enter 2 for calculating perimeter of the circle\n---> enter 3 for exit.");
-		//        int enteredNumber = scanner.nextInt();
-		//        while (enteredNumber!=3){
-		//            switch (enteredNumber){
-		//                case 1:
-		//                    System.out.println((double) Math.PI*Math.pow(radius,2));
-		//                    break;
-		//                case 2:
-		//                    System.out.println((double) Math.PI*2*radius);
-		//                    break;
-		//                default:
-		//                    System.out.println("Enter 1,2 or 3");
-		//            }
-		//            System.out.println("------------MENU-----------\n---> enter 1 for calculating area of the circle\n---> enter 2 for calculating perimeter of the circle\n---> enter 3 for exit.");
-		//            enteredNumber = scanner.nextInt();
-		//        }
-
-
-		////////////// HW 3 ////////////////
-
-		// 3.1
-		//        for (int number = 1; number < 21; number++){
-		//            System.out.println(number);
-		//        }
-
-		// 3.2
-		//        for (int number = 1; number < 21; number++){
-		//            if(number%3==0)
-		//                continue;
-		//            System.out.println(number);
-		//        }
-
-		// 3.3
-		//		for (int number = -20; number < 61; number++) {
-		//			if (number%2==0)
-		//                System.out.println(number);
-		//		}
-
-		// 3.4
-		//        for (int number = -20; number < 61; number++) {
-		//            if (number%2!=0)
-		//                System.out.println(number);
-		//        }
-
-		// 3.5
-		//        System.out.println(100*(100+1)/2);
-
-		// 3.6
-		//        int count = (100-1)/2+1;
-		//        int difference = 2;
-		//        int sum = (2*1 + (count-1)*difference)*count/2;
-		//        System.out.println(sum);
-
-		// 3.7
-		// as numbers are even(meaning symmetric, it is enough to find average of first and last)
-		//        int first = 2;
-		//        int last = 100;
-		//        int sum = (first+last)/2;
-		//        System.out.println(sum);
-
-		// 3.8
-		//        int sum = 0;
-		//        for (int count = 0; count<10;count++){
-		//            sum+= scanner.nextInt();
-		//        }
-		//        System.out.println("Sum of all inputs is "+sum);
-		//        System.out.println("Aveareg of all inputs is "+(float)sum/10);
-
-		// 3.9
-		//        System.out.print("Input number of terms : ");
-		//        int givenInteger = scanner.nextInt();
-		//            for(int number =1;number<=givenInteger;number++){
-		//                System.out.printf("Number is : %d and cube of the %d is : %d %n", number, number, (int)Math.pow(number,3));
-		//            }
-
-		// 3.10
-		//        System.out.print("Input the number (Table to be calculated) : ");
-		//        int givenInteger = scanner.nextInt();
-		//        for (int count = 1; count < 11; count++){
-		//            System.out.println(givenInteger + " X " + count + " = " + givenInteger*count);
-		//        }
-
-		// 3.11
-		//        System.out.print("Input a number: ");
-		//        int givenNumber = scanner.nextInt();
-		//        Boolean isPrime = true;
-		//        for(int i = 1;i<=Math.sqrt(givenNumber);i++){
-		//            if (givenNumber%i==0 && i!=1 || givenNumber ==1){
-		//                isPrime = false;
-		//                break;
-		//            }
-		//        }
-		//        System.out.println(isPrime?givenNumber + " is a prime number":givenNumber + " is Not a prime number.");
-
-		// 3.12
-		//        System.out.print("Input number of terms to display : ");
-		//        int givenInteger = scanner.nextInt();
-		//        int fibonacciPrevious = 0;
-		//        int fibonacciNext = 1;
-		//        System.out.println("Here is the Fibonacci series upto to " + givenInteger +" terms :");
-		//        System.out.print (fibonacciPrevious + " ");
-		//        for(int i = 1;i<givenInteger;i++){
-		//            System.out.print(fibonacciNext + " ");
-		//            int temporary = fibonacciNext;
-		//            fibonacciNext += fibonacciPrevious;
-		//            fibonacciPrevious = temporary;
-		//        }
-
-		// 3.13
-		String givenString = "ROBOTS_WILL_KILL_ALL_HUMANZ";
-		String reversedString = "";
-		for (int index = givenString.length() - 1; index >= 0; index--) {
-			reversedString += givenString.charAt(index);
-		}
-		System.out.println("Reversed string is: " + reversedString);
-
-
-		scanner.close();
+		// 5.17
+//		System.out.println("Factorial of given number is: "+factorial(generateNumber()));
 	}
+
+	// TODO: Methods public or private?
+	public static int[] generateSeveralNumbers(int countToGenerate){
+		Scanner scanner = new Scanner(System.in);
+		int[] array = new int[countToGenerate];
+		for (int i = 0; i < countToGenerate; i++) {
+			System.out.print("Number " + (i+1) + ": ");
+			array[i] = scanner.nextInt();
+		}
+		return array;
+	}
+
+	public static int sumOfNumbers(int[] array){
+		int sum = 0;
+		for (int element:array) {
+			sum+=element;
+		}
+		return sum;
+	}
+
+	public static int productOfNumbers(int[] array){
+		int product = 1;
+		for (int element:array) {
+			product*=element;
+		}
+		return product;
+	}
+
+	// which one out of following two is wanted?
+	public static int cubeOfProductOfNumbers(int[] array){
+		int product = 1;
+		for (int element:array) {
+			product*=element;
+		}
+		return (int)Math.pow(product,3);
+	}
+
+	public static int cubeOfNumber(int number){
+		return (int)Math.pow(number,3);
+	}
+
+	public static int findMinimum(int[] array){
+		int smallest = array[0];
+		for (int element: array) {
+			if(smallest > element) smallest = element;
+		}
+		return smallest;
+	}
+
+	public static String generateString(){
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Your string is : ");
+		return scanner.nextLine();
+	}
+
+	public static char getMiddleCharacter(String word){
+		return word.charAt(word.length()/2 + 1);
+	}
+
+	public static int countNumberOfWords(String sentence){
+		return sentence.split(" ").length;
+	}
+
+	public static int generateNumber(){
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Insert a number - ");
+		return scanner.nextInt();
+	}
+
+	public static Boolean isYearLeap(int year){
+		if (year%400==0) return true;
+		if(year%4==0 && year%100!=0) return true;
+		return false;
+	}
+
+	public static void printIfPasswordValid(String password){
+		if(password.length()>=10 && password.matches("[a-zA-Z0-9]*")){
+			int count = 0;
+			for (int i = 0; i < password.length(); i++) {
+				if(Character.isDigit(password.charAt(i))) count+=1;
+			}
+			System.out.println("Your password is " + (count>=2?"Valid":"Not Valid"));
+		}
+		else System.out.println("Your password is Not Valid");
+	}
+
+	public static double areaOfCircle(int radius){
+		return Math.PI*Math.pow(radius,2);
+	}
+
+	private static double circumferenceOfCircle(int radius){
+		return Math.PI*2*radius;
+	}
+
+	private static boolean ifTriangleValid(int[] sidesOfTriangle){
+		return sidesOfTriangle[0]+sidesOfTriangle[1]>sidesOfTriangle[2] && sidesOfTriangle[2]+sidesOfTriangle[1]>sidesOfTriangle[0] && sidesOfTriangle[0]+sidesOfTriangle[2]>sidesOfTriangle[1];
+	}
+
+	private static int perimeterOfTriangle(int[] sidesOfTriangle){
+		return sidesOfTriangle[0]+sidesOfTriangle[1]+sidesOfTriangle[2];
+	}
+
+	private static double areaOfTriangle(int[] sides){
+		int halfPerimeter = perimeterOfTriangle(sides)/2;
+		return Math.sqrt(halfPerimeter*(halfPerimeter-sides[0])*(halfPerimeter-sides[1])*(halfPerimeter-sides[2]));
+	}
+
+	private static void printAreaPerimeterOfTriangle(int[] sidesOfTriangle){
+		if(ifTriangleValid(sidesOfTriangle)){
+			System.out.println("Area of triangle is " + areaOfTriangle(sidesOfTriangle));
+			System.out.println("Perimeter of triangle is " + perimeterOfTriangle(sidesOfTriangle));
+		}
+		else System.out.println("Triangle is not valid");
+	}
+
+	public static int[] fillArrayWithRandomIntegers(int[] array) {
+		Random random = new Random();
+		for (int i = 0; i < array.length; i++) {
+			array[i] = random.nextInt(99 - 10) + 10;
+		}
+		return array;
+	}
+
+	public static void printArray(int[] array) {
+		for (int i = 0; i < array.length; i++) {
+			System.out.print(array[i] + " ");
+		}
+		System.out.println();
+	}
+
+	public static int[] sortAscendingOrder(int[] array) {
+		Arrays.sort(array);
+		return array;
+	}
+
+	public static int[] sortDescendingOrder(int[] array) {
+		sortAscendingOrder(array);
+		for (int i = 0; i < array.length / 2; i++) {
+			int temporary = array[i];
+			array[i] = array[array.length - i - 1];
+			array[array.length - i - 1] = temporary;
+		}
+		return array;
+	}
+
+	public static Boolean isPrime(int givenNumber){
+		for(int i = 1;i<=Math.sqrt(givenNumber);i++){
+			if (givenNumber%i==0 && i!=1 || givenNumber ==1){
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public static void printPrimesTillGivenNumber(int number){
+		System.out.println("All primes less than " + number + " are:");
+		for (int i = 2; i < number; i++) {
+			if(isPrime(i)) System.out.println(i);
+		}
+	}
+
+	public static int[] reverseArray(int[] array){
+		for(int i = 0; i < array.length / 2; i++)
+		{
+			int temporary  = array[i];
+			array[i] = array[array.length - i - 1];
+			array[array.length - i - 1] = temporary;
+		}
+		return array;
+	}
+
+	public static String isPalindrome(String word){
+		for (int i = 0; i < word.length()/2; i++) {
+			if(word.charAt(i)!=word.charAt(word.length()-1-i)) return "Word is Not palindrome.";
+		}
+		return "Word is a palindrome.";
+	}
+
+	public static int factorial(int number){
+		int product = 1;
+		for (int i = 1; i <= number; i++) {
+			product*=i;
+		}
+		return product;
+	}
+
+
+
 }
