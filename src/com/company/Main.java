@@ -313,11 +313,11 @@ public class Main {
 		return array;
 	}
 
-	public static String isPalindrome(String word) {
+	public static boolean isPalindrome(String word) {
 		for (int i = 0; i < word.length() / 2; i++) {
-			if (word.charAt(i) != word.charAt(word.length() - 1 - i)) return "Word is Not palindrome.";
+			if (word.charAt(i) != word.charAt(word.length() - 1 - i)) return false;
 		}
-		return "Word is a palindrome.";
+		return true;
 	}
 
 	public static long factorial(int number) {
