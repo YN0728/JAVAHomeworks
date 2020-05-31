@@ -8,17 +8,14 @@ public class Main {
 
 	public static void main(String[] args) {
 		/////////////// HW 3 = homework5+homework6 ////////////////
-
 		// 5.1
-		//		System.out.println("Sum of numbers in array is "+sumOfNumbers(generateSeveralNumbers(2)));
+		//		System.out.println("Sum of numbers in array is " + sumOfNumbers(generateSeveralNumbers(2)));
 
 		// 5.2
-		//		System.out.println("Product of numbers in array is "+ productOfNumbers(generateSeveralNumbers(2)));
+		//		System.out.println("Product of numbers in array is " + productOfNumbers(generateSeveralNumbers(2)));
 
 		// 5.3
 		//		System.out.println("Cube of product of numbers in array is " + cubeOfProductOfNumbers(generateSeveralNumbers(2)));
-		//		int product = productOfNumbers(generateNumbers(2));
-		//		System.out.println("Cube of product of numbers in array is " + cubeOfNumber(product));
 
 		// 5.4
 		//		System.out.println("Smallest number among inputs is " + findMinimum(generateSeveralNumbers(3)));
@@ -81,7 +78,7 @@ public class Main {
 		//		System.out.println(isPalindrome(generateString()));
 
 		// 5.17
-		//		System.out.println("Factorial of given number is: "+factorial(generateNumber()));
+		//		System.out.println("Factorial of given number is: " + factorial(generateNumber()));
 
 		// 5.18
 		//		int input = generateNumber();
@@ -101,12 +98,64 @@ public class Main {
 		//		displayMenuUI();
 
 		// 5.21
-		//		int[][] matrix = createMatrixWithRandoms(generateNumber(),27,78);
+		//		int[][] matrix = createMatrixWithRandoms(generateNumber(), 27, 78);
 		//		printMatrixWithIntegers(matrix);
 		//		displayMenuUIMatrixRotation(matrix);
+
+		// 6.1
+		//		Circle circle = new Circle();
+		//		circle.setRadius(1);
+		//		System.out.println("Circumference : " + circle.calculateCircumference());
+		//		System.out.println("Area : " + circle.calculateArea());
+
+		// 6.2
+		//		Rectangle rectangle = new Rectangle();
+		//		rectangle.setHeight(4);
+		//		rectangle.setWidth(7);
+		//		System.out.println("Perimeter : " + rectangle.calculatePerimeter());
+		//		System.out.println("Area : " + rectangle.calculateArea());
+
+		// 6.3
+		//		Triangle triangle = new Triangle();
+		//		triangle.setSideA(5);
+		//		triangle.setSideB(3);
+		//		triangle.setSideC(4);
+		//		System.out.println("Perimeter : " + triangle.calculatePerimeter());
+		//		System.out.println("Area : " + triangle.calculateArea());
+
+		// 6.4
+		//		Point point = new Point();
+		//		Point point1 = new Point();
+		//		point.setCoordinateX(3);
+		//		point.setCoordinateY(4);
+		//		point1.setCoordinateX(4);
+		//		point1.setCoordinateY(5);
+		//		System.out.println(point.distance());
+		//		System.out.println(point.distance(point1));
+
+		// 6.5
+		//		TemperatureConverter temperatureConverter = new TemperatureConverter();
+		//		double fahrenheitFromCelsius = temperatureConverter.convertCelsiusToFarenheit(0);
+		//		double fahrenheitFromKelvin = temperatureConverter.convertKelvinToFarenheit(273);
+		//		System.out.println("Celsius(=0) to Fahrenheit: " + fahrenheitFromCelsius);
+		//		System.out.println("Kelvin(=273) to Fahrenheit: " + fahrenheitFromKelvin);
+
+		// 6.6
+		//		DistanceConverter distanceConverter = new DistanceConverter();
+		//		double mile = distanceConverter.convertMetersToMiles(1000);
+		//		double meter = distanceConverter.convertMilesToMeters(1);
+		//		System.out.println("Mile: " + mile);
+		//		System.out.println("Meter: " + meter);
+
+		// 6.8
+		//		Random random = new Random();
+		//		Movie[] moviesArray = new Movie[10];
+		//		for (int i = 0; i < moviesArray.length; i++) {
+		//			moviesArray[i] = new Movie(random.nextInt(10), "title " + i);
+		//		}
+		//		System.out.println("Bests are: " + bestMovies(moviesArray));
 	}
 
-	// TODO: Methods public or private?
 	public static int[] generateSeveralNumbers(int countToGenerate) {
 		Scanner scanner = new Scanner(System.in);
 		int[] array = new int[countToGenerate];
@@ -133,17 +182,8 @@ public class Main {
 		return product;
 	}
 
-	// which one out of following two is wanted?
 	public static int cubeOfProductOfNumbers(int[] array) {
-		int product = 1;
-		for (int element : array) {
-			product *= element;
-		}
-		return (int) Math.pow(product, 3);
-	}
-
-	public static int cubeOfNumber(int number) {
-		return (int) Math.pow(number, 3);
+		return (int) Math.pow(productOfNumbers(array), 3);
 	}
 
 	public static int findMinimum(int[] array) {
@@ -161,14 +201,13 @@ public class Main {
 	}
 
 	public static char getMiddleCharacter(String word) {
-		return word.charAt(word.length() / 2 + 1);
+		return word.charAt(word.length() / 2);
 	}
 
 	public static int countNumberOfWords(String sentence) {
 		return sentence.split(" ").length;
 	}
 
-	//TODO should I change naming? generate?
 	public static int generateNumber() {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Insert a number - ");
@@ -222,12 +261,11 @@ public class Main {
 	public static int[] fillArrayWithRandomIntegers(int[] array) {
 		Random random = new Random();
 		for (int i = 0; i < array.length; i++) {
-			array[i] = random.nextInt(99 - 10) + 10;
+			array[i] = random.nextInt();
 		}
 		return array;
 	}
 
-	// TODO make it also for strings
 	public static void printArray(int[] array) {
 		for (int i = 0; i < array.length; i++) {
 			System.out.print(array[i] + " ");
@@ -282,7 +320,7 @@ public class Main {
 		return "Word is a palindrome.";
 	}
 
-	public static int factorial(int number) {
+	public static long factorial(int number) {
 		int product = 1;
 		for (int i = 1; i <= number; i++) {
 			product *= i;
@@ -290,7 +328,6 @@ public class Main {
 		return product;
 	}
 
-	// TODO combine following 2 functions
 	public static void printMatrixWithIntegers(int[][] matrix) {
 		for (int i = 0; i < matrix.length; i++) {
 			printArray(matrix[i]);
@@ -383,7 +420,6 @@ public class Main {
 		}
 	}
 
-
 	public static void displayMenuUIMatrixRotation(int[][] matrix) {
 		Scanner inputNumber = new Scanner(System.in);
 		System.out.println("------------ MENU -----------\nPress 1 For rotating 90*\nPress 2 For rotating 180*\nPress 3 For rotating 270*\nPress 4 to Exit\n");
@@ -409,5 +445,19 @@ public class Main {
 		}
 	}
 
-
+	public static String bestMovies(Movie[] moviesArray) {
+		String bestMovies = "";
+		int bestRank = moviesArray[0].getRating();
+		for (int i = 1; i < moviesArray.length; i++) {
+			if (bestRank < moviesArray[i].getRating()) {
+				bestRank = moviesArray[i].getRating();
+			}
+		}
+		for (int i = 0; i < moviesArray.length; i++) {
+			if (bestRank == moviesArray[i].getRating()) {
+				bestMovies += moviesArray[i].getMovieName() + "    ";
+			}
+		}
+		return bestMovies;
+	}
 }
