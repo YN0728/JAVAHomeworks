@@ -1,8 +1,11 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -95,13 +98,109 @@ public class Main {
 		//		System.out.println("Are sets same? - " + areSetsEqual(hashSet1, hashSet2));
 
 		// 11
-//		HashSet<String> hashSet1 = new HashSet<>();
-//		hashSet1.add("a");
-//		hashSet1.add("b");
-//		HashSet<String> hashSet2 = new HashSet<>();
-//		hashSet2.add("a");
-//		intersectionOfSets(hashSet1, hashSet2);
-//		hashSet1.forEach(item -> System.out.println(item));
+		//		HashSet<String> hashSet1 = new HashSet<>();
+		//		hashSet1.add("a");
+		//		hashSet1.add("b");
+		//		HashSet<String> hashSet2 = new HashSet<>();
+		//		hashSet2.add("a");
+		//		intersectionOfSets(hashSet1, hashSet2);
+		//		hashSet1.forEach(item -> System.out.println(item));
+
+		// 12
+		//		HashSet<String> hashSet = new HashSet<>();
+		//		hashSet.add("string 1");
+		//		hashSet.add("string 2");
+		//		System.out.println("Elements before removal");
+		//		hashSet.forEach(item -> System.out.println(item));
+		//		removeAllElement(hashSet);
+		//		System.out.println("Elements after removal");
+		//		hashSet.forEach(item -> System.out.println(item));
+
+		// 13
+		//		Map<String, Integer> hashMap = new HashMap<>();
+		//		addKeyValue(hashMap, "key", 111);
+
+		// 14
+		//		Map<String, Integer> hashMap = new HashMap<>();
+		//		addKeyValue(hashMap, "key1", 111);
+		//		addKeyValue(hashMap, "key2", 222);
+		//		System.out.println("Size of map will be " + getMapSize(hashMap));
+
+		// 15
+		//		Map<String, Integer> hashMap1 = new HashMap<>();
+		//		addKeyValue(hashMap1, "key1", 111);
+		//		addKeyValue(hashMap1, "key2", 222);
+		//		Map<String, Integer> hashMap2 = new HashMap<>();
+		//		copyMapToGivenMap(hashMap1, hashMap2);
+		//		for (Map.Entry entry : hashMap2.entrySet()) {
+		//			System.out.println("Key: " + entry.getKey() + " Value: " + entry.getValue());
+		//		}
+
+		// 16
+		//		Map<String, Integer> hashMap = new HashMap<>();
+		//		addKeyValue(hashMap, "key1", 111);
+		//		addKeyValue(hashMap, "key2", 222);
+		//		removeAllElementFromMap(hashMap);
+
+		// 17
+		//		Map<String, Integer> hashMap = new HashMap<>();
+		//		addKeyValue(hashMap, "key1", 111);
+		//		addKeyValue(hashMap, "key2", 2222);
+		//		System.out.println(isElementInMap(hashMap, "key1", 111));
+		//		System.out.println(isElementInMap(hashMap, "key1", 222));
+
+		// 18
+		//		Map<String, String> hashMap = new HashMap<>() {{
+		//			put("key1", "value1");
+		//			put("key2", "value2");
+		//		}};
+		//		Map<String, String> copyOfHashMap = shallowCopyOfMap(hashMap);
+		//		for (Map.Entry item : copyOfHashMap.entrySet()) {
+		//			System.out.println(item.getKey() + " " + item.getValue());
+		//		}
+
+		// 19
+		//		Map<String, String> hashMap = new HashMap<>() {{
+		//			put("key1", "value1");
+		//			put("key2", "value2");
+		//		}};
+		//		int a = 111;
+		//		System.out.println(isKeyInMap(hashMap, a));
+
+		// 20
+		//		Map<String, String> hashMap = new HashMap<>() {{
+		//			put("key1", "value1");
+		//			put("key2", "value2");
+		//		}};
+		//		System.out.println(isValueInMap(hashMap, "value1"));
+
+		// 21
+		//		Map<String, String> hashMap = new HashMap<>() {{
+		//			put("key1", "value1");
+		//			put("key2", "value2");
+		//		}};
+		//		System.out.println(createSetFromMap(hashMap));
+
+		// 22
+		//		Map<String, String> hashMap = new HashMap<>() {{
+		//			put("key1", "value1");
+		//			put("key2", "value2");
+		//		}};
+		//		System.out.println(getValueFromKey(hashMap, "key1"));
+
+		// 23
+		//		Map<String, Integer> hashMap = new HashMap<>() {{
+		//			put("key1", 111);
+		//			put("key2", 222);
+		//		}};
+		//		System.out.println(createSetFromMapKeys(hashMap));
+
+		// 24
+		Map<String, Integer> hashMap = new HashMap<>() {{
+			put("key1", 111);
+			put("key2", 222);
+		}};
+		System.out.println(createListFromMapValue(hashMap));
 
 
 	}
@@ -156,5 +255,58 @@ public class Main {
 		set1.retainAll(set2);
 		return set1;
 	}
+
+	public static void removeAllElementFromSet(Set set) {
+		set.removeAll(set);
+	}
+
+	public static void addKeyValue(Map map, String key, Integer value) {
+		map.put(key, value);
+	}
+
+	public static int getMapSize(Map map) {
+		return map.size();
+	}
+
+	public static void copyMapToGivenMap(Map fromMap, Map toMap) {
+		toMap.putAll(fromMap);
+	}
+
+	public static void removeAllElementFromMap(Map map) {
+		map.clear();
+	}
+
+	public static boolean isElementInMap(Map map, String key, Integer value) {
+		return map.containsKey(key) && map.get(key) == value;
+	}
+
+	public static Map shallowCopyOfMap(Map map) {
+		return new HashMap(map);
+	}
+
+	public static boolean isKeyInMap(Map map, Object key) {
+		return map.containsKey(key);
+	}
+
+	public static boolean isValueInMap(Map map, Object value) {
+		return map.containsValue(value);
+	}
+
+	public static Set createSetFromMap(Map map) {
+		return new HashSet(map.entrySet());
+	}
+
+	public static Object getValueFromKey(Map map, Object key) {
+		return map.get(key);
+	}
+
+	public static Set createSetFromMapKeys(Map map) {
+		return new HashSet(map.keySet());
+	}
+
+	public static List createListFromMapValue(Map map) {
+		return new ArrayList(map.values());
+	}
+
 
 }
