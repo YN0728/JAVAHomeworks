@@ -23,28 +23,28 @@ public class Main {
 		List<Integer> listOfNumerics = asList(1, 2, 3, 4, 5);
 
 		// 1
-		//		System.out.println(listToUpperCase(list));
+		System.out.println(listToUpperCase(list));
 
 		// 2
-		//		System.out.println(listLessThanFourChars(list));
+		System.out.println(elementsWithLessThanFourChars(list));
 
 		// 3
-		//		System.out.println(combineLists(listOfLists));
+		System.out.println(combineListsIntoOne(listOfLists));
 
 		// 4
-		//		System.out.println("Oldest among all is: " + oldestPerson(people).getName());
+		System.out.println("Oldest among all is: " + oldestPerson(people).getName());
 
 		// 5
-		//		System.out.println("Sum of all numbers will be: " + sumOfNumerics(listOfNumerics));
+		System.out.println("Sum of all numbers will be: " + sumOfNumerics(listOfNumerics));
 
 		// 6
-		//		System.out.println(teensUnder18(people));
+		System.out.println(teensUnder18(people));
 
 		// 7
-		//		System.out.println(separateAdultsFromKids(people));
+		System.out.println(separateAdultsFromKids(people));
 
 		// 8
-		//		System.out.println(groupByNationality(people));
+		System.out.println(groupByNationality(people));
 
 		// 9
 		System.out.println(getAllNames(people));
@@ -57,13 +57,13 @@ public class Main {
 			.collect(Collectors.toList());
 	}
 
-	public static List<String> listLessThanFourChars(List<String> list) {
+	public static List<String> elementsWithLessThanFourChars(List<String> list) {
 		return list.stream()
 			.filter(item -> item.length() < 4)
 			.collect(Collectors.toList());
 	}
 
-	public static List<String> combineLists(List<List<String>> listOfLists) {
+	public static List<String> combineListsIntoOne(List<List<String>> listOfLists) {
 		return listOfLists.stream()
 			.flatMap(l -> l.stream())
 			.collect(Collectors.toList());
