@@ -38,7 +38,7 @@ public class Main {
 		System.out.println("Sum of all numbers will be: " + sumOfNumerics(listOfNumerics));
 
 		// 6
-		System.out.println(teensUnder18(people));
+		System.out.println(teensUnderEighteen(people));
 
 		// 7
 		System.out.println(separateAdultsFromKids(people));
@@ -77,7 +77,7 @@ public class Main {
 		return listOfNumerics.stream().reduce(0, (accumulator, item) -> accumulator += item);
 	}
 
-	public static List<String> teensUnder18(List<Person> people) {
+	public static List<String> teensUnderEighteen(List<Person> people) {
 		return people.stream()
 			.filter(person -> person.getAge() < 18)
 			.map(person -> person.getName())
